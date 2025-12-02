@@ -191,15 +191,20 @@
             box-shadow: 0 5px 20px rgba(0, 255, 252, 0.3);
         }
 
-        .video-placeholder {
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: 200px;
-            background: linear-gradient(135deg, #1a1a1a 0%, #000 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            border-bottom: 2px solid #222;
+            height: 100%;
+            border: none;
         }
 
         .video-info {
@@ -216,6 +221,44 @@
         .video-desc {
             font-size: 1rem;
             color: #999;
+        }
+
+        .experience-item {
+            background: #0a0a0a;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            border: 2px solid #222;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item:hover {
+            border-color: #00fffc;
+            box-shadow: 0 5px 20px rgba(0, 255, 252, 0.2);
+        }
+
+        .exp-title {
+            font-size: 1.5rem;
+            color: #fffc00;
+            margin-bottom: 10px;
+        }
+
+        .exp-company {
+            font-size: 1.2rem;
+            color: #00fffc;
+            margin-bottom: 5px;
+        }
+
+        .exp-duration {
+            font-size: 1rem;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .exp-desc {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.6;
         }
 
         footer {
@@ -265,7 +308,6 @@
             50% { transform: translateY(-20px); }
         }
 
-        /* Scanline effect */
         body::before {
             content: "";
             position: fixed;
@@ -295,7 +337,7 @@
         <section class="section">
             <h2>👋 About Me</h2>
             <p class="about-text">
-                Hey there! I'm Aryan, a freelance video editor who loves turning raw footage into captivating stories. 
+                Hey there! I'm Aryan, a freelance video editor from Kolkata who loves turning raw footage into captivating stories. 
                 Whether it's a YouTube video, social media content, or a full-blown commercial, I bring creativity, 
                 precision, and a quirky touch to every project. Let's make something awesome together!
             </p>
@@ -303,6 +345,23 @@
                 🎨 I don't just edit videos—I craft experiences. From snappy cuts to smooth transitions, 
                 color grading to sound design, I handle it all with passion and attention to detail.
             </p>
+            <p class="about-text">
+                📚 Currently pursuing Bachelor in Media Science with specialization in PR and Digital Marketing at NSHM Knowledge Campus.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>💼 Experience</h2>
+            <div class="experience-item">
+                <div class="exp-title">Video Editor</div>
+                <div class="exp-company">IPAC (Indian Political Action Committee)</div>
+                <div class="exp-duration">Freelance Project</div>
+                <div class="exp-desc">
+                    Edited engaging political campaign videos and social media content. Collaborated with the creative team 
+                    to produce compelling visual narratives that resonated with diverse audiences. Managed tight deadlines 
+                    while maintaining high-quality output for digital platforms.
+                </div>
+            </div>
         </section>
 
         <section class="section">
@@ -310,19 +369,19 @@
             <div class="skills-grid">
                 <div class="skill-card floating">
                     <div class="skill-icon">🎬</div>
-                    <div class="skill-name">Video Editing</div>
+                    <div class="skill-name">Premiere Pro</div>
                 </div>
                 <div class="skill-card floating" style="animation-delay: 0.2s;">
                     <div class="skill-icon">🎨</div>
-                    <div class="skill-name">Color Grading</div>
+                    <div class="skill-name">DaVinci Resolve</div>
                 </div>
                 <div class="skill-card floating" style="animation-delay: 0.4s;">
-                    <div class="skill-icon">🎵</div>
-                    <div class="skill-name">Sound Design</div>
+                    <div class="skill-icon">🎞️</div>
+                    <div class="skill-name">Filmora</div>
                 </div>
                 <div class="skill-card floating" style="animation-delay: 0.6s;">
                     <div class="skill-icon">✨</div>
-                    <div class="skill-name">Motion Graphics</div>
+                    <div class="skill-name">CapCut</div>
                 </div>
                 <div class="skill-card floating" style="animation-delay: 0.8s;">
                     <div class="skill-icon">📱</div>
@@ -332,38 +391,57 @@
                     <div class="skill-icon">🎭</div>
                     <div class="skill-name">Storytelling</div>
                 </div>
+                <div class="skill-card floating" style="animation-delay: 1.2s;">
+                    <div class="skill-icon">🎵</div>
+                    <div class="skill-name">Sound Design</div>
+                </div>
+                <div class="skill-card floating" style="animation-delay: 1.4s;">
+                    <div class="skill-icon">🖼️</div>
+                    <div class="skill-name">Canva</div>
+                </div>
             </div>
         </section>
 
         <section class="section">
-            <h2>🎥 Featured Work</h2>
+            <h2>🎥 Sample Work</h2>
+            <p class="about-text" style="margin-bottom: 30px;">
+                Check out these sample edits showcasing different styles and techniques I work with:
+            </p>
             <div class="video-showcase">
                 <div class="video-card">
-                    <div class="video-placeholder">🎬</div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" allowfullscreen></iframe>
+                    </div>
                     <div class="video-info">
-                        <div class="video-title">Brand Commercial</div>
-                        <div class="video-desc">High-energy commercial with dynamic cuts and color grading</div>
+                        <div class="video-title">Cinematic Travel Edit</div>
+                        <div class="video-desc">Dynamic cuts, color grading, and smooth transitions</div>
                     </div>
                 </div>
                 <div class="video-card">
-                    <div class="video-placeholder">📱</div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/3AtDnEC4zak" allowfullscreen></iframe>
+                    </div>
                     <div class="video-info">
-                        <div class="video-title">Social Media Reels</div>
-                        <div class="video-desc">Viral-worthy content optimized for Instagram & TikTok</div>
+                        <div class="video-title">Social Media Reel Style</div>
+                        <div class="video-desc">Fast-paced editing optimized for Instagram & TikTok</div>
                     </div>
                 </div>
                 <div class="video-card">
-                    <div class="video-placeholder">🎭</div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/kxPCFljwJws" allowfullscreen></iframe>
+                    </div>
                     <div class="video-info">
-                        <div class="video-title">YouTube Content</div>
-                        <div class="video-desc">Engaging vlogs and tutorials with smooth transitions</div>
+                        <div class="video-title">Commercial Style Edit</div>
+                        <div class="video-desc">Professional product showcase with motion graphics</div>
                     </div>
                 </div>
                 <div class="video-card">
-                    <div class="video-placeholder">✨</div>
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/faFgsGShX9I" allowfullscreen></iframe>
+                    </div>
                     <div class="video-info">
-                        <div class="video-title">Motion Graphics</div>
-                        <div class="video-desc">Eye-catching animations and visual effects</div>
+                        <div class="video-title">Music Video Edit</div>
+                        <div class="video-desc">Beat-synced editing with creative effects</div>
                     </div>
                 </div>
             </div>
@@ -375,7 +453,7 @@
                 Got a project in mind? Need a video editor who gets it? Let's chat!
             </p>
             <a href="mailto:aryannmukherjee@gmail.com" class="cta-button">📧 Email Me</a>
-            <a href="#" class="cta-button">💼 View Resume</a>
+            <a href="resume.html" class="cta-button">💼 View Resume</a>
         </section>
 
         <footer>
